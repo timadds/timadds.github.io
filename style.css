@@ -1,0 +1,150 @@
+* {
+  min-height: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  transform-origin: 0px 0px 0px;
+}
+
+/* add default variables to root */
+:root {
+  --main-width: 74%;
+  --header-height: 1.2in;
+  --sidebar-width: calc(100% - var(--main-width));
+}
+
+body {
+  font-size: 0.95em;
+  margin: 0 auto;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+  text-decoration-skip: ink;
+  hyphens: none;
+  text-align: justify;
+}
+
+p {
+  margin-top: 1.0;
+  margin-bottom: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 0.5em;
+}
+
+li {
+  list-style-type: circle;
+  padding: 0;
+  margin-left: 1.618em;
+}
+
+/* sidebar */
+aside {
+  background-color: #f5f5f5;
+  flex-basis: var(--sidebar-width);
+  padding: 0.1618in 0 0.1618in 0.1618in;
+  display: flex;
+  flex-direction: column;
+}
+
+aside > section {
+  margin-top: 2em;
+}
+
+/* snap last child to bottom of page */
+.sidebar > section:last-child {
+  margin-top: auto;
+}
+
+/* arrange sheet-main and sidebar in columns */
+.sheet {
+  display: flex;
+  flex-direction: row;
+}
+
+.sheet-main {
+  flex-basis: var(--main-width);
+  display: flex;
+  flex-direction: column;
+  padding: 0.1618in;
+  padding-top: 0;
+}
+
+.sheet-body
+{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.sheet-body > section + section {
+  margin-top: 1em;
+}
+
+/* contact */
+
+.contact > ul > li {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+/* skills */
+
+.skills {
+  font-size: 92%;
+}
+
+.skills > ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* wrap the skills tiles */
+.skills > ul > li {
+  display: block;
+  float: left;
+  margin: 6px 6px 0 0;
+}
+
+/* style the skills tiles */
+.skills > ul > li > span {
+  background-color: white;
+  border: 1px solid rgba(45, 45, 45, 0.1618);
+  border-radius: 3px;
+  color: #333;
+  padding: 4px 8px;
+  display: inline-block;
+}
+
+/* experience & education */
+
+.tblRow {
+  width: 100%;
+  background: #43b8b2;
+}
+
+.tblRow > section {
+  float: left;
+  width: 80%;
+  background: #ffffff;
+}
+
+.tblRow > aside {
+  float: right;
+  text-align: right;
+  width: 20%;
+  padding: 0;
+  background: #ffffff;
+}
+
+.tblRow + * {
+  /* clear float after tblRow */
+  clear: both; 
+}
+
