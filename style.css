@@ -43,6 +43,11 @@ li {
   margin-left: 1.618em;
 }
 
+/* link styles */
+a:visited {
+    color: blue; 
+}
+
 /* sidebar */
 aside {
   background-color: #f5f5f5;
